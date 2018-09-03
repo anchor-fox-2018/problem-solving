@@ -9,6 +9,7 @@
         IF counterHadir % budi is equal 0
             PUSH "Budi" to array variable 
         IF counterKalender % tanggalLibur is equal 0
+            SPLICE from index 0 to array length 
             PUSH "Tempat Fitness Tutup" to array variable
         increment counterHadir by 1
         LOG `Tanggal ${counterKalender}: ${array}`
@@ -34,6 +35,7 @@ function name() {
             array.push("Budi");
         }
         if (counterKalender % tanggalLibur === 0) {
+            array.splice(0,array.length);
             array.push("Tempat Fitness Tutup");
         }
         counterHadir++;
